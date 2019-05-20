@@ -36,8 +36,8 @@ function transposeGrid(grid, direction) {
             newGrid[i][j] = grid[j][i];
         } else {
             newGrid[j][i] = grid[i][j];
+            }
         }
-    }
     }
     return newGrid;
 }

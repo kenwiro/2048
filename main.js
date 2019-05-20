@@ -20,7 +20,7 @@ function keyPressed() {
 
     switch(keyCode) {
         case DOWN_ARROW:
-        // dont nothing
+        // do nothing
         break;
 
         case UP_ARROW:
@@ -34,10 +34,12 @@ function keyPressed() {
         break;
 
         case LEFT_ARROW:
-        grid = flipGrid(grid);
+        
         grid = transposeGrid(grid, 1);
         rotated = true;
+        grid = flipGrid(grid);
         flipped = true;
+        
         break;
         default:
         played = false;
@@ -77,7 +79,7 @@ function keyPressed() {
 }
 
 function updateCanvas() {
-    background(255);
+    background(220);
     drawGrid();
     select('#score').html(score);
 }
@@ -87,29 +89,30 @@ function drawGrid() {
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
             noFill();
-            strokeWeight(3);
+            strokeWeight(5);
             let val = grid[i][j];
             let s =  val.toString();
             stroke(0);
             if (grid_new[i][j] === 1) {
-                stroke(200, 0, 200);
+                stroke(150);
                 grid_new[i][j] = 0; 
             } else {
-                stroke(0);   
+                stroke(100);   
                 
             }
-
 
             if (val != 0) {
             fill(colorsAndSizes[s].color);
             } else {
             noFill();
             }
-            rect(i * w, j * w, w, w, 25);
+            rect(i * w, j * w, w, w);
+            
+            
             if (val !== 0) {
                 textAlign(CENTER, CENTER);
                 noStroke();
-                fill(0);
+                fill(70);
                 textSize(colorsAndSizes[s].size);
                 text(val, i * w + w / 2, j * w + w / 2);
 

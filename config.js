@@ -1,35 +1,35 @@
 let colorsAndSizes = {
     "2": {
         size: 64,
-        color: "#FFA07A"
+        color: "#eee4da"
     },
     "4": {
         size: 64,
-        color: "#FF69B4"
+        color: "#ede0c8"
     },
     "8": {
         size: 64,
-        color: "#49BB6C"
+        color: "#f2b179"
     },
     "16": {
         size: 64,
-        color: "#49BB6C"
+        color: "#f59563"
     },
     "32": {
         size: 64,
-        color: "#49BB6C"
+        color: "#f67c5f"
     },
     "64": {
         size: 64,
-        color: "#FF8C00"
+        color: "#f65e3b"
     },
     "128": {
         size: 36,
-        color: "#F35956"
+        color: "#edcf72"
     },
     "256": {
         size: 36,
-        color: "#20B2AA"
+        color: "#edcc61"
     },
     "512": {
         size: 36,
